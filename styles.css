@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+}
+
+
+
+#board{
+    background-color: blue;
+    height: 600px;
+    position: relative;
+    width: 100%;
+}
+
+#player{
+    
+    bottom: 130px;
+    height: 70px;
+    left: 80px;
+    position: absolute;
+    width: 70px;
+    
+}
+
+#player img{
+    
+    height: 100%;
+    width: 100%;
+}
+
+#background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("assets/backgroundMontain.jpg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size:  auto 100%;
+    animation: backgroundMove 5s linear infinite;
+}
+
+#background img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: backgroundMove 5s linear infinite;
+}
+
+.playerJump{
+    animation: playerjump 1s linear;
+}
+
+@keyframes playerjump{
+    0%{
+        bottom: 160px;
+    }
+    45%, 55%{
+        bottom: 300px;
+    }
+   
+}
+
+@keyframes backgroundMove{
+    from{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -1000px;
+    }
+}
+
+#cactus{
+    position: absolute;
+    width: 80px;
+    height: 150px;
+    bottom: 110px;
+    right: 0;
+    animation: cactusMovement 2s linear infinite;
+}
+
+#cactus img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes cactusMovement{
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.scoreContainer{
+    font-size: 50PX;
+    text-align: center;
+    margin-top: 20px;
+}   
